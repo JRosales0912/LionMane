@@ -12,5 +12,25 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('layouts.masterlog');
+})->name('login');
+
+
+Route::get('/logout', function () {
+    return view('vlog');
+})->name('logout');
+
+
+Route::get('/parser', function () {
+    return view('vparser');
+})->name('parser');
+
+
+Route::get('/docs', function () {
+    return view('vdocs');
+})->name('docs');
+
+
+Route::get('/drilldown', function () {
+    return view('vdrilldown');
+})->name('drilldown');
