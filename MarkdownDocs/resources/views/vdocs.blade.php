@@ -35,7 +35,33 @@
                     </table>
                 </div>
                 <div>
-                    content
+                    <!-- Documents-->
+                    <table>
+                        <th>
+                            <tr>
+                                Title
+                            </tr>
+                            <tr>
+                                Author
+                            </tr>
+                            <tr>
+                                Creation Date
+                            </tr>
+                        </th>
+                        @foreach($doc as $docs)
+                        <th>
+                            <tr>
+                                {{ $doc -> title }}
+                            </tr>
+                            <tr>
+                                {{ $doc -> author }}
+                            </tr>
+                            <tr>
+                                {{ $doc -> created_at}}
+                            </tr>
+                        </th>
+                        @endforeach
+                    </table>
                 </div>
             </div>
         </div>

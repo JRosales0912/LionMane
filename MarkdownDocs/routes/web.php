@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('layouts.masterlog');
+    return redirect()->guest('/login');
 })->name('login');
 
 
@@ -34,3 +34,7 @@ Route::get('/docs', function () {
 Route::get('/drilldown', function () {
     return view('vdrilldown');
 })->name('drilldown');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
